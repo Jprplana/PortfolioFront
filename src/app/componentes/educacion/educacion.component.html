@@ -1,0 +1,91 @@
+<div class="card" id="educacion-card">
+  <div class="card-header">
+    Educación
+    <div class="icono-suma">
+      <button
+        type="button"
+        class="btn btn-light"
+        routerLink="/nuevaedu"
+        *ngIf="isLogged"
+      >
+        <img
+          src="/assets/img/plus icon black.png"
+          alt="Agregar educación"
+          height="12px"
+          width="auto"
+        />
+      </button>
+    </div>
+  </div>
+
+  <!--EDUCACION ALTERNATIVO-->
+  <!--EDUCACION 1-->
+  <div class="exp-laboral">
+    <div class="educ-card-body">
+      <div class="card-text-laboral">
+        <h5>Universidad de Buenos Aires</h5>
+        <p class="fecha-txt">Enero 2000 a Octubre 2003 - 3 años</p>
+        <p>
+          Contador Público
+        </p>
+      </div>
+      
+    </div>
+  </div>
+
+  <!--EDUCACION 2-->
+  <div class="exp-laboral">
+
+    <div class="educ-card-body">
+      <div class="card-text-laboral">
+        <h5>Escuela Media N° 207 de Pehuajó</h5>
+        <p class="fecha-txt">Marzo 1992 a Diciembre 1996 - 5 años</p>
+        <p>
+          Bachiller común con Idiomas extranjeros
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!--FIN EDUCACION ALT-->
+
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11 tabla-educacion">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of educacion">
+          <td style="max-width: 230px">
+            <h5>{{ Educacion.nombreE }}</h5>
+          </td>
+          <td style="min-width: 520px">{{ Educacion.descripcionE }}</td>
+          <td *ngIf="isLogged" style="text-align: right">
+            <button
+              class="btn btn-light"
+              routerLink="/editedu/{{ Educacion.id }}"
+            >
+              <img
+                src="/assets/img/edit-pencil-black.png"
+                alt="Editar educación"
+                height="20px"
+                width="auto"
+                style="opacity: 50%"
+              />
+            </button>
+          </td>
+          <td *ngIf="isLogged" style="text-align: right">
+            <button class="btn btn-light" (click)="delete(Educacion.id)">
+              <img
+                src="/assets/img/garbage-bin-garbage-can-garbage-container-trash-bin-trash-can-icon-431304.jpg"
+                alt="Eliminar educación"
+                height="20px"
+                width="auto"
+                style="opacity: 50%"
+              />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

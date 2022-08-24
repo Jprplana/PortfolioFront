@@ -1,0 +1,27 @@
+.pri-card-right {
+  width: 175px;
+  margin-right: 30px;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+#logo-uba-banner {
+  max-height: 50px;
+  width: auto;
+}
+
+#texto-uba {
+  float: right;
+}
+
+#logo-argprog-banner {
+  max-height: 40px;
+  width: auto;
+}
+
+#logo-freecodecamp-banner {
+  max-height: 20px;
+  width: auto;
+  margin-top: 15px;
+}
+

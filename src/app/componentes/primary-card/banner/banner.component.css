@@ -1,0 +1,15 @@
+.banner {
+  background-image: url(/assets/img/Coding-Background.jpg);
+  height: 500px;
+  margin-left: -150px;
+}
+
+#foto-perfil {
+  height: 200px;
+  width: 200px;
+  top: 320px;
+  left: 200px;
+  position: relative;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.7));
+  transform: rotate(5deg) scaleX(-1);
+}

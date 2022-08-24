@@ -1,0 +1,56 @@
+.tabla-experiencia {
+  margin: 15px;
+  width: 98%;
+}
+
+.laboral-card-body {
+  margin-right: 20px;
+  display: flex;
+}
+
+.exp-laboral {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-laboral {
+  max-width: 300px;
+}
+
+.picture-laboral {
+  max-height: 100px;
+  max-width: 200px;
+  position: relative;
+  margin-left: 30px;
+}
+
+.card-text-laboral {
+  margin-left: 100px;
+  text-align: justify;
+  margin-right: 150px;
+}
+
+#img-exp1 {
+  max-width: 160px;
+}
+
+#img-exp2 {
+  max-width: 150px;
+  width: auto;
+  margin-left: 40px;
+}
+
+#img-exp3 {
+  max-width: 150px;
+  width: auto;
+  margin-left: 40px;
+}
+.pack-edicion-laboral {
+  display: flex;
+  align-items: center;
+  right: auto;
+}
+
+.fecha-txt {
+  font-style: italic;
+}

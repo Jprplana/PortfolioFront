@@ -1,0 +1,10 @@
+.project {
+  margin-bottom: 30px;
+}
+
+.project-img {
+  height: 10rem;
+  width: auto;
+  display: flex;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.7));
+}

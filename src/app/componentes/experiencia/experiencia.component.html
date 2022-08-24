@@ -1,0 +1,195 @@
+<div class="card" id="experiencia-card">
+  <div class="card-header">
+    Experiencia laboral
+    <div class="icono-suma">
+      <button
+        type="button"
+        class="btn btn-light"
+        routerLink="/nuevaexp"
+        *ngIf="isLogged"
+      >
+        <img
+          src="/assets/img/plus icon black.png"
+          alt="Agregar experiencia"
+          height="12px"
+          width="auto"
+        />
+      </button>
+    </div>
+  </div>
+
+  <!--EXPERIENCIAS ALTERNATIVO-->
+  <!--EXPERIENCIA 1-->
+  <div class="exp-laboral">
+    <div class="img-laboral">
+      <img
+        id="img-exp1"
+        class="picture-laboral"
+        src="/assets/img/ministerio-de-energia-y-mineria.png"
+        alt="Nombre alternativo"
+      />
+    </div>
+    <div class="laboral-card-body">
+      <div class="card-text-laboral">
+        <h5>Data Entry y Atención al público</h5>
+        <p class="fecha-txt">Enero 2016 a Diciembre 2017 - 2 años</p>
+        <p>
+          Atención telefónica de reclamos por cortes de suministro de energía eléctrica a usuarios de Capital Federal y Gran Buenos Aires.
+Data Entry y asesoramiento al público sobre el programa de Tarifa Social en los servicios de gas y electricidad de todo el país.
+        </p>
+      </div>
+      <div class="pack-edicion-laboral">
+        <div class="trash-bin">
+          <a href="#" id="btn-eliminar"
+            ><img
+              src="/assets/img/garbage-bin-garbage-can-garbage-container-trash-bin-trash-can-icon-431304.jpg"
+              alt="Eliminar"
+              height="20px"
+              width="auto"
+          /></a>
+        </div>
+        <div class="lapiz-edicion">
+          <a href="#" id="btn-edicion"
+            ><img
+              src="/assets/img/edit-pencil-black.png"
+              alt="Editar"
+              height="20px"
+              width="auto"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--EXPERIENCIA 2-->
+  <div class="exp-laboral">
+    <div class="img-laboral">
+      <img
+        id="img-exp2"
+        class="picture-laboral"
+        src="/assets/img/logo-ministerio-2014-transparente.png"
+        alt="Nombre alternativo"
+      />
+    </div>
+    <div class="laboral-card-body">
+      <div class="card-text-laboral">
+        <h5>Asesor en Prensa y Comunicación / Editor Audiovisual</h5>
+        <p class="fecha-txt">Noviembre 2007 a Diciembre 2015 - 8 años</p>
+        <p>
+          Realización, producción y edición de contenidos audiovisuales para difusión de gestión del Ministerio.
+Asesoramiento en producción y toma de imágenes de obras y eventos del Ministerio.
+Brindar soporte logístico y técnico en eventos públicos del Ministerio, de manera presencial y remota.
+Difusión de contenidos audiovisuales de obras y acciones de gestión del Ministerio, a través de distintas redes sociales.
+A cargo de la actualización de contenidos audiovisuales en la página web institucional del Ministerio.
+A cargo de tareas administrativas del Área Edición Audiovisual de la Oficina de Prensa y Comunicación del Ministerio.
+Eventual cobertura de eventos del Ministerio en el interior del país, realizando tareas generales propias de las áreas de Edición y Prensa del Ministerio.
+
+        </p>
+      </div>
+      <div class="pack-edicion-laboral">
+        <div class="trash-bin">
+          <a href="#" id="btn-eliminar"
+            ><img
+              src="/assets/img/garbage-bin-garbage-can-garbage-container-trash-bin-trash-can-icon-431304.jpg"
+              alt="Eliminar"
+              height="20px"
+              width="auto"
+          /></a>
+        </div>
+        <div class="lapiz-edicion">
+          <a href="#" id="btn-edicion"
+            ><img
+              src="/assets/img/edit-pencil-black.png"
+              alt="Editar"
+              height="20px"
+              width="auto"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--EXPERIENCIA 3-->
+  <div class="exp-laboral">
+    <div class="img-laboral img-fluid">
+      <img
+        id="img-exp3"
+        class="picture-laboral"
+        src="/assets/img/idcard-logo-copia.png"
+        alt="Nombre alternativo"
+      />
+    </div>
+    <div class="laboral-card-body">
+      <div class="card-text-laboral">
+        <h5>Encargado de Servicio Técnico y Producción</h5>
+        <p class="fecha-txt">Agosto 2004 a Diciembre 2006 - 2 años y 4 meses</p>
+        <p>
+          Reparación y mantenimiento de impresoras de tarjetas de PVC
+Planeamiento de producción y personalización de credenciales.
+Soporte telefónico a clientes del interior del país.
+Mantenimiento y reparación de computadoras de la empresa.
+        </p>
+      </div>
+      <div class="pack-edicion-laboral">
+      <div class="trash-bin">
+        <a href="#" id="btn-eliminar"
+          ><img
+            src="/assets/img/garbage-bin-garbage-can-garbage-container-trash-bin-trash-can-icon-431304.jpg"
+            alt="Eliminar"
+            height="20px"
+            width="auto"
+        /></a>
+      </div>
+      <div class="lapiz-edicion">
+        <a href="#" id="btn-edicion"
+          ><img
+            src="/assets/img/edit-pencil-black.png"
+            alt="Editar"
+            height="20px"
+            width="auto"
+        /></a>
+      </div>
+    </div>
+    </div>
+
+  </div>
+  <!--FIN EXPERIENCIAS ALT-->
+
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11 tabla-experiencia">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Experiencia of expe">
+          <td>
+            <h5>{{ Experiencia.nombreE }}</h5>
+          </td>
+          <td>{{ Experiencia.descripcionE }}</td>
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-light"
+              routerLink="/editexp/{{ Experiencia.id }}"
+            >
+              <img
+                src="/assets/img/edit-pencil-black.png"
+                alt="Editar experiencia"
+                height="20px"
+                width="auto"
+                style="opacity: 50%"
+              />
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-light" (click)="delete(Experiencia.id)">
+              <img
+                src="/assets/img/garbage-bin-garbage-can-garbage-container-trash-bin-trash-can-icon-431304.jpg"
+                alt="Eliminar experiencia"
+                height="20px"
+                width="auto"
+                style="opacity: 50%"
+              />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

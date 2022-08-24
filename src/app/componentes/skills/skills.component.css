@@ -1,0 +1,30 @@
+#skills-group {
+  margin-left: 10%;
+}
+
+.skill-card {
+  align-items: center;
+  padding-top: 10%;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.7));
+  margin: 30px;
+}
+
+.skill-card-title {
+  font-size: 75%;
+}
+
+.skill-card-body {
+  padding-top: 10%;
+  padding-bottom: 30%;
+}
+
+.pack-edicion-skills {
+  display: flex;
+  left: 43%;
+  position: absolute;
+}
+
+.card-img-top {
+  height: 170px;
+  width: auto;
+}
