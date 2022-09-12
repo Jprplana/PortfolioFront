@@ -32,6 +32,7 @@ import { EditExperienciaComponent } from './componentes/experiencia/edit-experie
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
+import { EditBannerComponent } from './componentes/primary-card/banner/edit-banner.component';
 
 
 
@@ -61,7 +62,8 @@ import { EditEducacionComponent } from './componentes/educacion/edit-educacion.c
     EditExperienciaComponent,
     EducacionComponent,
     NeweducacionComponent,
-    EditEducacionComponent
+    EditEducacionComponent,
+    EditBannerComponent
   ],
   imports: [
     BrowserModule,
