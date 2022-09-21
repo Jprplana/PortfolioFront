@@ -1,27 +1,35 @@
 <div class="card" id="skills-card">
   <div class="card-header">
-    Hard Skills & Soft Skills
+    Hard & Soft Skills
     <div class="icono-suma">
-      <a href="#" id="btn-suma" title="Botón de Agregar"
-        ><img
+      <button
+        type="button"
+        class="btn btn-light"
+        routerLink="/newskill"
+        *ngIf="isLogged"
+      >
+        <img
           src="/assets/img/plus icon black.png"
-          alt="Agregar"
+          alt="Agregar skill"
           height="12px"
           width="auto"
-      /></a>
+        />
+      </button>
     </div>
   </div>
+
   <div class="skills-card-body">
     <div
-      class="row row-cols-1 row-cols-md-5 g-4 container-fluid"
+      class="row row-cols-1 row-cols-md-5 g-4 container"
       id="skills-group"
     >
       <!--SKILL 1-->
-      <div class="col">
-        <div class="card skill-card">
+      <div class="row-cols-1 circulo">
+        <div class="card skill-card" *ngFor="let skill of skill">
           <circle-progress
-            [percent]="75"
+            [percent]="skill.porcentaje"
             [radius]="100"
+            [imageSrc]="''"
             [outerStrokeWidth]="16"
             [innerStrokeWidth]="8"
             [outerStrokeColor]="'#78C000'"
@@ -32,32 +40,39 @@
             [animationDuration]="300"
             [responsive]="true"
           ></circle-progress>
+
           <div class="skill-card-body">
-            <h6 class="skill-card-title">Resolución de problemas</h6>
-            <div class="pack-edicion-skills img-fluid">
-              <div class="trash-bin">
-                <a href="#" id="btn-eliminar"
-                  ><img
-                    src="/assets/img/garbage-bin-garbage-can-garbage-container-trash-bin-trash-can-icon-431304.jpg"
-                    alt="Eliminar"
-                    height="20px"
-                    width="auto"
-                /></a>
-              </div>
-              <div class="lapiz-edicion">
-                <a href="#" id="btn-edicion"
-                  ><img
-                    src="/assets/img/edit-pencil-black.png"
-                    alt="Editar"
-                    height="20px"
-                    width="auto"
-                /></a>
-              </div>
-            </div>
+            <h4 class="skill-card-title">{{ skill.nombre }}</h4>
+            <td *ngIf="isLogged">
+              <button
+                class="btn btn-light"
+                routerLink="/editskill/{{ skill.id }}"
+              >
+                <img
+                  src="/assets/img/edit-pencil-black.png"
+                  alt="Editar skill"
+                  height="20px"
+                  width="auto"
+                  style="opacity: 50%"
+                />
+              </button>
+            </td>
+            <td *ngIf="isLogged">
+              <button class="btn btn-light" (click)="delete(skill.id)">
+                <img
+                  src="/assets/img/garbage-bin-garbage-can-garbage-container-trash-bin-trash-can-icon-431304.jpg"
+                  alt="Eliminar skill"
+                  height="20px"
+                  width="auto"
+                  style="opacity: 50%"
+                />
+              </button>
+            </td>
           </div>
         </div>
       </div>
-      <!--SKILL 2-->
+      <!--
+      SKILL 2
       <div class="col">
         <div class="card skill-card">
           <circle-progress
@@ -98,7 +113,7 @@
           </div>
         </div>
       </div>
-      <!--SKILL 3-->
+      SKILL 3
       <div class="col">
         <div class="card skill-card">
           <circle-progress
@@ -139,7 +154,7 @@
           </div>
         </div>
       </div>
-      <!--SKILL 4-->
+      SKILL 4
       <div class="col">
         <div class="card skill-card">
           <circle-progress
@@ -179,7 +194,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </div>

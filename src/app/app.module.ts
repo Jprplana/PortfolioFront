@@ -33,6 +33,8 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
 import { EditBannerComponent } from './componentes/primary-card/banner/edit-banner.component';
+import { EditSkillsComponent } from './componentes/skills/edit-skills.component';
+import { NewSkillsComponent } from './componentes/skills/new-skills.component';
 
 
 
@@ -63,7 +65,9 @@ import { EditBannerComponent } from './componentes/primary-card/banner/edit-bann
     EducacionComponent,
     NeweducacionComponent,
     EditEducacionComponent,
-    EditBannerComponent
+    EditBannerComponent,
+    EditSkillsComponent,
+    NewSkillsComponent
   ],
   imports: [
     BrowserModule,
