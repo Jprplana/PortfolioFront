@@ -1,8 +1,13 @@
 #skills-group {
-  margin-left: 10%;
+}
+
+#skills-card {
+  display: flex;
 }
 
 .skill-card {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   padding-top: 10%;
   filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.7));
@@ -10,7 +15,8 @@
 }
 
 .skill-card-title {
-  font-size: 75%;
+  font-size: 100%;
+  text-align: center;
 }
 
 .skill-card-body {
@@ -27,4 +33,10 @@
 .card-img-top {
   height: 170px;
   width: auto;
+}
+
+.circulo {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
 }
