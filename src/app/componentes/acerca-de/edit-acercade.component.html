@@ -1,0 +1,27 @@
+<div class="container" *ngIf="acercade">
+  <div class="titulo-edicion"><h3>Editar Acerca de mí</h3></div>
+
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="descripcion"
+            ><h5>Edite su descripción personal</h5></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="descripcion"
+            name="descripcion"
+            [(ngModel)]="acercade.descripcion"
+            required
+          />
+        </div>
+
+        <button class="btn btn-secondary" style="margin: 15px">
+          Confirmar edición
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

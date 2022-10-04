@@ -1,16 +1,24 @@
 <div class="card" id="acercade-card">
   <div class="card-header">
     Acerca de mí
-    <!--<div class="lapiz-edicion">
-      <a href="#" id="btn-edicion"
-        ><img
-          src="/assets/img/edit-pencil-black.png"
-          alt="Editar"
-          height="20px"
+    <div class="icono-suma">
+      <button
+        type="button"
+        class="btn btn-light"
+        routerLink="/newacerca"
+        *ngIf="isLogged"
+      >
+        <img
+          src="/assets/img/plus icon black.png"
+          alt="Agregar descripcion"
+          height="12px"
           width="auto"
-      /></a>
-    </div>-->
+        />
+      </button>
+    </div>
   </div>
+
+  <!--ACERCADE ALTERNATIVO
   <div class="card-body">
     <p class="card-text">
       Soy un estudiante autodidacta (o no tanto) de Desarrollo Web Full Stack.
@@ -22,5 +30,42 @@
       tutoriales ofrecidos en Youtube. Este, Mi Portfolio, es mi primer
       proyecto.
     </p>
+  </div>
+-->
+
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11 tabla-experiencia">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let acercade of acercade">
+          <td>{{ acercade.descripcion }}</td>
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-light"
+              routerLink="/editacerca/{{ acercade.id }}"
+            >
+              <img
+                src="/assets/img/edit-pencil-black.png"
+                alt="Editar descripcion"
+                height="20px"
+                width="auto"
+                style="opacity: 50%"
+              />
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-light" (click)="delete(acercade.id)">
+              <img
+                src="/assets/img/garbage-bin-garbage-can-garbage-container-trash-bin-trash-can-icon-431304.jpg"
+                alt="Eliminar descripcion"
+                height="20px"
+                width="auto"
+                style="opacity: 50%"
+              />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
