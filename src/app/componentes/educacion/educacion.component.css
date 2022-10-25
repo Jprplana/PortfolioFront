@@ -1,9 +1,17 @@
-/**.tabla-educacion {
+.tabla-educacion {
   margin: 15px;
   width: 98%;
-  justify-content: space-between;
 }
-**/
+
+#edu-text {
+  padding-left: 20px;
+  text-align: justify;
+  padding-right: 140px;
+}
+
+h6 {
+  width: 240px;
+ }
 
 .educ-card-body
  {

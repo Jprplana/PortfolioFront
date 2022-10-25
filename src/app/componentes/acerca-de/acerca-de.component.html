@@ -38,11 +38,11 @@
     <table class="table">
       <tbody>
         <tr *ngFor="let acercade of acercade">
-          <td>{{ acercade.descripcion }}</td>
+          <td id="acerca-text">{{ acercade.descripcion }}</td>
           <td *ngIf="isLogged">
             <button
               class="btn btn-light"
-              routerLink="/editacerca/{{ acercade.id }}"
+              routerLink="/editacerca/1"
             >
               <img
                 src="/assets/img/edit-pencil-black.png"

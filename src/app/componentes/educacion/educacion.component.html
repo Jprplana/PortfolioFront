@@ -55,11 +55,11 @@
     <table class="table">
       <tbody>
         <tr *ngFor="let Educacion of educacion">
-          <td style="max-width: 230px">
-            <h5>{{ Educacion.nombreE }}</h5>
+          <td>
+            <h6>{{ Educacion.nombreE }}</h6>
           </td>
-          <td style="min-width: 520px">{{ Educacion.descripcionE }}</td>
-          <td *ngIf="isLogged" style="text-align: right">
+          <td id="edu-text">{{ Educacion.descripcionE }}</td>
+          <td *ngIf="isLogged">
             <button
               class="btn btn-light"
               routerLink="/editedu/{{ Educacion.id }}"

@@ -1,3 +1,13 @@
+#exp-text {
+  padding-left: 20px;
+  text-align: justify;
+  padding-right: 140px;
+}
+
+h6 {
+  width: 220px;
+}
+
 .tabla-experiencia {
   margin: 15px;
   width: 98%;
