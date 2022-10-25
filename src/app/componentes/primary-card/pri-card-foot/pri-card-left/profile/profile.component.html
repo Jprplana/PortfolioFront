@@ -1,11 +1,14 @@
 <div>
   <h3 class="card-title">{{ persona.nombre }} {{ persona.apellido }}</h3>
 
-  <p class="card-text">Full Stack Web Development Student<br /></p>
-  <p class="localidad">
-    Pehuajó, Buenos Aires - Argentina<br />
-    <a href="#" class="link-contacto">Información de contacto</a>
-  </p>
+  <p class="card-text">{{ persona.descripcion }}<br /></p>
+  <p class="localidad">{{ persona.lugar }}</p>
+</div>
+
+<div>
+  <button class="btn btn-light" routerLink="/editperfil/1" *ngIf="isLogged">
+    Editar Perfil
+  </button>
 </div>
 
 <!--La foto de perfil está en el banner.component-->

@@ -1,0 +1,74 @@
+<div class="container" *ngIf="persona">
+  <div class="titulo-edicion"><h3>Editar Perfil</h3></div>
+
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="nombre"><h5>Nombre</h5></label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            name="nombre"
+            [(ngModel)]="persona.nombre"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="apellido"><h5>Apellido</h5></label>
+          <input
+            type="text"
+            class="form-control"
+            id="apellido"
+            name="apellido"
+            [(ngModel)]="persona.apellido"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="descripcion"><h5>Título o profesión</h5></label>
+          <input
+            type="text"
+            class="form-control"
+            id="descripcion"
+            name="descripcion"
+            [(ngModel)]="persona.descripcion"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="lugar"><h5>Lugar de residencia</h5></label>
+          <input
+            type="text"
+            class="form-control"
+            id="lugar"
+            name="lugar"
+            [(ngModel)]="persona.lugar"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="img"><h5>Imagen</h5></label>
+          <input
+            type="file"
+            class="form-control"
+            id="img"
+            name="img"
+            [(ngModel)]="persona.img"
+            (change)="uploadImage($event)"
+            accept=".jpg, .jpeg, .png"
+          />
+        </div>
+        <br>
+        <div class="img-previa">
+          <img [src]="imageService.url" alt="Imagen previa" width="100px" />
+        </div>
+
+        <button class="btn btn-secondary" style="margin: 15px">
+          Confirmar edición
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
